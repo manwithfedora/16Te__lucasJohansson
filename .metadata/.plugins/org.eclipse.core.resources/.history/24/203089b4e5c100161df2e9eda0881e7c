@@ -1,0 +1,30 @@
+package krypto;
+
+
+import java.util.Scanner;
+
+import me.krypto.se.Framen;
+
+
+    public class krypto {
+    	
+    
+	//char [] key = new char [29];
+    
+public static void main(String args[]){
+    	
+    	System.out.println(" ");
+	   	Scanner desu = new Scanner (System.in);
+    	int userinp = desu.nextInt();
+    	int userinp2 = desu.nextInt();
+    	
+    	new Framen(userinp, userinp2);
+  
+   
+    }
+
+
+
+
+		
+	}

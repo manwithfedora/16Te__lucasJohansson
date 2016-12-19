@@ -1,0 +1,16 @@
+package me.krypto.se;
+
+public class krypto {
+
+
+//char [] key = new char [29];
+
+public static void main(String args[]){
+
+    new Framen();
+
+}
+
+
+
+}
