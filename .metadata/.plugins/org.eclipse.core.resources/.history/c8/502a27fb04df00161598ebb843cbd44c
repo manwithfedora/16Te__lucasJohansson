@@ -1,0 +1,5 @@
+package me.anagram.se;
+
+public class dedu extends Anagram {
+
+}

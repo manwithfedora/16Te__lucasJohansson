@@ -8,25 +8,25 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class grahpics extends JPanel {
-	
+
 	private int Width = 100;
 	private int Height = 100;
 	private int d = 50; // diameter
 	private int x = 0;
 	private int y = 0;
-    private int moveX = 1;
-    private int moveY = 1;
-    
+	private int moveX = 1;
+	private int moveY = 1;
+
 	private void moveBall() {
-		if(x + moveX <= 0)
+		if (x + moveX <= 0)
 			moveX = 1;
-		if(x + moveX > getWidth() - d)
-				moveX = -1;
-		if(y + moveY < 0)
-			    moveY = 1; 
-		if(y + moveY > getHeight() - d)
-			    moveY = -1; 
-		
+		if (x + moveX > getWidth() - d)
+			moveX = -1;
+		if (y + moveY < 0)
+			moveY = 1;
+		if (y + moveY > getHeight() - d)
+			moveY = -1;
+
 		x += moveX;
 		y += moveY;
 	}
