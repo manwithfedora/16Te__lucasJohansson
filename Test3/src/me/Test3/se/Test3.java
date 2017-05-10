@@ -30,3 +30,17 @@ public void paint(Graphics g){
         g.fillOval(400, 50, d, d);
 }
 }
+void generateMap()
+{
+    blocks.clear();
+    for(int x = 0; x < 150; x++)
+    {
+        for(int y = 0; y < 150; y++)
+        {
+            if(Math.random() < 0.5)
+                blocks.add(new Block(x * Block.blockSize, y * Block.blockSize, eBlockType.GRASS));
+            else
+                blocks.add(new Block(x * Block.blockSize, y * Block.blockSize, eBlockType.WATER));
+        }
+    }
+}
