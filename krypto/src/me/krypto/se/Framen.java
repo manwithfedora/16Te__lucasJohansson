@@ -21,12 +21,12 @@ public class Framen extends JFrame {
 
 	public Framen(int rows, int cols) {
 		
-		//how many boxes we have and size
+		//antal och storlek på rutorna 
 		int GRID_ROWS = rows;
 		int GRID_COL = cols;
 		int BOX_SIZE = 50;
 
-		//how the text looks
+		//textstil 
 		Font DESU_FONT = new Font("Monospaced", Font.BOLD, 20);
 		Color DESU_COLOR = Color.BLUE;
 		
@@ -39,17 +39,17 @@ public class Framen extends JFrame {
 		JTextField[][] jt = new JTextField[GRID_ROWS][GRID_COL];
 
 		
-		// Text-boxes & Button second panel
+		// Text-Rutor & Button andra panel
 		JTextField DESU_IN = new JTextField();
 		JTextField DESU_OUT = new JTextField();
 		JButton DESU_BTN = new JButton("BTN");
 
 
-		// content panel that holds everything
+		// allt är i den här 
 		JPanel content = new JPanel();
 
 
-		// Game panel and switch panel
+		// Game panel och switch panel
 		JPanel p = new JPanel();
 		JPanel p2 = new JPanel();
 

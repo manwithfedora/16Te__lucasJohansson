@@ -9,8 +9,8 @@ import me.krypto.se.Framen;
 	//char [] key = new char [29];
     
 public static void main(String args[]){
-    	
-    	System.out.println("banana");
+    	// inte missledande 
+    	System.out.println("banana size");
 	   	Scanner kryp = new Scanner (System.in);
     	int userinp = kryp.nextInt();
     	int userinp2 = kryp.nextInt();
