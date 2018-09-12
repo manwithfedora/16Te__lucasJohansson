@@ -10,7 +10,7 @@ import me.krypto.se.Framen;
     
 public static void main(String args[]){
     	// inte missledande 
-    	System.out.println("banana size");
+    	System.out.println("size dose matter");
 	   	Scanner kryp = new Scanner (System.in);
     	int userinp = kryp.nextInt();
     	int userinp2 = kryp.nextInt();
