@@ -20,6 +20,8 @@ public class PastureGUI extends JFrame implements ActionListener {
     private JLabel[][]         grid;
     /** The button for starting the simulation. */
     private JButton            startButton    = new JButton("Start");
+    private JButton            stopButton    = new JButton("Stop");
+    private JButton            exitButton    = new JButton("Exit");
     
     
     public PastureGUI() {
@@ -31,10 +33,15 @@ public class PastureGUI extends JFrame implements ActionListener {
         setSize(pasture.getWidth()*30, pasture.getHeight()*30);
 	
 	startButton.addActionListener(this);
+	stopButton.addActionListener(this);
+	exitButton.addActionListener(this);
              	
         JPanel buttons = new JPanel();
-        buttons.setLayout(new GridLayout(1,1));
+        buttons.setLayout(new GridLayout(1,3));
         buttons.add(startButton);
+        buttons.add(stopButton);
+        buttons.add(exitButton);
+        
 
 	JPanel field = new JPanel();
         field.setBackground(new Color(27,204,89));
@@ -59,15 +66,33 @@ public class PastureGUI extends JFrame implements ActionListener {
 	startButton.setEnabled(true);
 	updateAll();
 	setVisible(true);
+	
+	stopButton.setEnabled(false);
+	updateAll();
+	setVisible(true);
+	
+	exitButton.setEnabled(true);
+	updateAll();
+	setVisible(true);
     }
 
 
     public void actionPerformed(ActionEvent e) {
 	if (e.getSource() == startButton) {
-	    startButton.setEnabled(false);	
+	    startButton.setEnabled(false);
+	    stopButton.setEnabled(true);
 	    pasture.start();   
 	}
+	if (e.getSource() == stopButton) {
+	    stopButton.setEnabled(false);
+	    startButton.setEnabled(true);
+	    pasture.stop();   
+	}
+	if (e.getSource() == exitButton) {
+	    System.exit(0);
+	}
     }
+
     
 
     public void updateAll() {

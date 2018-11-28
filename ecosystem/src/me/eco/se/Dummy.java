@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class Dummy implements Entity {
 
-    private final ImageIcon image = new ImageIcon("unknown.gif"); 
+    private final ImageIcon image = new ImageIcon("bin/unknown.gif"); 
 
     protected Point position;
 
@@ -20,13 +20,29 @@ public class Dummy implements Entity {
 	this.position  = position;
     }
     
-    public Point getPosition() { return position; }
+    public Point getPosition()  { 
+    	return position;
+        }
 
     
-    public void setPosition(Point newPosition) { position = newPosition; }
+    public void setPosition(Point newPosition) {
+    	position = newPosition; 
+    	}
 
+    public int newDirection() {
+    	return (int) (Math.floor(Math.random() + Math.floor(3)) - 1);
+    }
     
     public void tick() {
+    	
+    	int dx = newDirection();
+		int dy = newDirection();
+		
+		if (getPosition().getX() + dx <pasture.getWidth()
+			&& getPosition().getX() + dx >=0
+			&& getPosition().getY() + dy <pasture.getHeight()
+			&& getPosition().getY() + dy >= 0)
+
 	setPosition(new Point((int)getPosition().getX()+1,(int)getPosition().getY()));
     }
 
@@ -34,7 +50,9 @@ public class Dummy implements Entity {
 	return "Dummy";
     }
     
-    public ImageIcon getImage() { return image; }
+    public ImageIcon getImage() { 
+    	return image;
+    	}
 
    
 }

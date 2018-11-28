@@ -36,6 +36,23 @@ public class Pasture implements ActionListener {
 				       (int)(Math.random() * height)); 
 	    Entity dummy = new Dummy(this, position);
 	    addEntity(dummy);
+	    
+	    Point position2 = new Point((int)(Math.random() * width),
+			       (int)(Math.random() * height)); 
+	    Entity dummy2 = new Dummy(this, position2);
+	    addEntity(dummy2);
+	    
+	    Point position3 = new Point((int)(Math.random() * width),
+			       (int)(Math.random() * height)); 
+	    Entity dummy3 = new Dummy(this, position3);
+	    addEntity(dummy3);
+	    
+	    Point position4 = new Point((int)(Math.random() * width),
+			       (int)(Math.random() * height)); 
+	    Entity Plant1 = new Plant(this, position4);
+	    addEntity(Plant1);
+	    
+
         }
         catch (MissingResourceException pe) {
             System.err.println("Pasture.initPasture(): " + pe.getMessage());
