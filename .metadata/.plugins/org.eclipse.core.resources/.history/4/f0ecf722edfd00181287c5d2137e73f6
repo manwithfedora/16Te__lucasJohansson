@@ -1,0 +1,11 @@
+
+public class day12015 {
+
+	
+	public static void main(String[]agrs){
+		
+		String lift = new String();
+		fileReader file = new fileReader("day1.text");
+		int floor = 0;
+	}
+}

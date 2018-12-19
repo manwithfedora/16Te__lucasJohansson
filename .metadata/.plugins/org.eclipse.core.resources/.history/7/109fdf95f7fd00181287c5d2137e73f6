@@ -1,0 +1,16 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+public class day12018 {
+	
+	public day12018(){
+		System.out.println("konstuktor");
+	}
+
+	
+	public static void main(String[] args){
+		new day12018();
+	}
+	
+}

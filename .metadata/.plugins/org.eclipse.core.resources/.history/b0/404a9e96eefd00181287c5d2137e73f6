@@ -1,0 +1,30 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class day12015 {
+
+	
+	public static void main(String[]agrs){
+		
+		String lift = new String();
+		try{
+			FileReader file = new FileReader("day1.text");
+			BufferedReader br = new BufferedReader(file);
+			lift = br.readLine();
+			
+			System.out.println(lift);
+			System.out.println("file found...");
+		}
+		catch(FileNotFoundException ex){
+			System.err.println("file not found");
+		}
+		catch(IOException ex){
+			System.err.println("error");
+		}
+		
+		
+		int floor = 0;
+	}
+}
