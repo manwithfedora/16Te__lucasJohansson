@@ -1,0 +1,14 @@
+
+public class InsultFive {
+	
+	public InsultFive(){
+		
+		
+	}
+	
+	public static void mian(String[]args){
+		new InsultFive();
+		
+	}
+
+}

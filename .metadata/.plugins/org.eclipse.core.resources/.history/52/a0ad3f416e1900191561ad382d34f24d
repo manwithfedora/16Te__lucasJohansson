@@ -1,0 +1,22 @@
+
+public class InslutOne {
+	public static void main(String[] args){
+		
+		String[] first = new String["artless " , "bawdy "];
+		int choice1 = 1 + r.nextInt(first,length);
+		String response1 = "";
+		
+		String[] secound = new String["base-court " , "bat-fowling "];
+		int choice2 = 1 + r.nextInt(secound.length);
+		String response2 = "";
+		
+		String[] third = new String["apple-john" , "baggage"];
+		int choice3 = 1 + r.nextInt(third.length);
+		String response3 = "";
+		
+		System.out.println("Thou " + response1 + response2 + response3 + "!");
+	}
+	
+
+
+}

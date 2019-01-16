@@ -1,0 +1,61 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+
+public class InsultFive {
+	ArrayList<String> partOne = ArrayList<String>();
+	ArrayList<String> partTwo = ArrayList<String>();
+	ArrayList<String> partThree = ArrayList<String>();
+	
+	public InsultFive() throws FileNotFoundException {
+		
+		partOne = readFile("firstrow.txt");
+		partTwo = readFile("secoundrow.txt");
+		partThree = readFile("thirdrow.txt");
+				 
+	private ArrayList<String> readFile(String filename) {
+	ArrayList<String> line = ArrayList<String>();
+	FileReader file;
+	BufferedReader br = new BufferedReader(file);
+	try {
+		String line = br.readLine();
+		while(!( line == null)){
+			lines.add(Line);
+			line = br.readLine();
+		}
+		System.out.println("part 1: Frequency " + frequency);
+		
+		
+	} catch (FileNotFoundException e) {
+		System.out.println("not found");
+	} catch (IOException e) {
+		System.out.println("error");
+
+	}
+	
+	return lines;
+	}
+		private String insultpart(ArrayList<String> part){
+			return "";
+	
+	}
+	public String insultMe(){
+		return "";
+	}
+	
+	public static void mian(String[]args){
+		try {
+		InsultFive insults = new InsultFive();
+		}
+		catch(FileNotFoundException) {
+			System.err.println(not found);
+			
+			
+		}
+		}
+	}
+
+}

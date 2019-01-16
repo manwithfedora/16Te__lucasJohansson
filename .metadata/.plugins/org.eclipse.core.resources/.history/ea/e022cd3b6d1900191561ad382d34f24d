@@ -1,0 +1,11 @@
+
+public class InslutOne {
+	public static void main(String[] args){
+		int[] arynums = new int[3];
+		
+		
+	}
+	
+
+
+}
