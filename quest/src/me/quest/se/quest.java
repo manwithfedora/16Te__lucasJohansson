@@ -1,5 +1,5 @@
 package me.quest.se;
-// allt nedan för är kopierat:)
+
 import java.util.Scanner;
 
 public class quest {
@@ -7,6 +7,7 @@ public class quest {
 	static String förnamn = "";
 	static String efternamn = "";
 	static String spelarnamn = "";
+	static String fullname = "";
 	static int ålder;
 	static char riktning;
 	static String kommando = "";
@@ -16,17 +17,17 @@ public class quest {
 	static float hälsa = 100;
 
 	static void gameStory() {
-		System.out.println("");
-		System.out.println("");
+		System.out.println("First row");
+		System.out.println("2:nd row");
 	}
-static int probability(){
-return (int) (Math.random());
-}
 
-static int probability(int max){
-return (int) (Math.random());
-}
+	static int probability() {
+		return (int) (Math.random());
+	}
 
+	static int probability(int max) {
+		return (int) (Math.random());
+	}
 
 	static void delay(int millis) {
 		try {
@@ -35,33 +36,27 @@ return (int) (Math.random());
 		}
 	}
 
-	public static void main(String[] args){
-
-
+	public static void main(String[] args) {
 		gameStory();
-
-
 
 		Scanner hai = new Scanner(System.in);
 
-
-
-
-		System.out.print("");
+		System.out.print("GivenName?");
 		förnamn = hai.nextLine();
-		System.out.print("");
+		System.out.print("FamilyName?");
 		efternamn = hai.nextLine();
-		System.out.print(" ");
+		System.out.print("Player Name?");
 		spelarnamn = hai.nextLine();
-		System.out.print("");
+		System.out.print("How old are you?");
 		ålder = hai.nextInt();
+		System.out.print("so you are the famous Adventurer! you are just "
+				+ ålder + " years old?...");
+		fullname = hai.nextLine();
 		hai.nextLine();
 		do {
 			System.out.print("Vart?");
 			kommando = hai.nextLine();
 			hälsa -= 0.1;
-
-
 
 			riktning = kommando.charAt(0);
 			switch (riktning) {
@@ -92,12 +87,10 @@ return (int) (Math.random());
 			}
 			System.out.println("You are at (" + posX + "," + posY + ") with health " + hälsa);
 
-
-
 			int action = probability();
-			if (action == 0) { // Monster 
+			if (action == 0) { // Monster
 
-			} else if (action <= 10) { // NPC 
+			} else if (action <= 10) { // NPC
 
 			} else if (action <= 15) { // Pengar
 
@@ -109,7 +102,7 @@ return (int) (Math.random());
 				else
 					pengar += 10;
 			} else if (action <= 18) { // hål
-				
+
 				int djup = probability(5) + 1;
 				System.out.println("You fell into a hole and lost " + djup + " health.");
 				hälsa -= djup;

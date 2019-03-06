@@ -1,0 +1,118 @@
+package me.quest.se;
+
+import java.util.Scanner;
+
+public class quest {
+
+	static String förnamn = "";
+	static String efternamn = "";
+	static String spelarnamn = "";
+	static String fullname = "";
+	static int ålder;
+	static char riktning;
+	static String kommando = "";
+	static int posX = 0;
+	static int posY = 0;
+	static int pengar = 10;
+	static float hälsa = 100;
+
+	static void gameStory() {
+		System.out.println("First row");
+		System.out.println("2:nd row");
+	}
+
+	static int probability() {
+		return (int) (Math.random());
+	}
+
+	static int probability(int max) {
+		return (int) (Math.random());
+	}
+
+	static void delay(int millis) {
+		try {
+			Thread.sleep(millis);
+		} catch (InterruptedException e) {
+		}
+	}
+
+	public static void main(String[] args) {
+		gameStory();
+
+		Scanner hai = new Scanner(System.in);
+
+		System.out.print("GivenName?");
+		förnamn = hai.nextLine();
+		System.out.print("FamilyName?");
+		efternamn = hai.nextLine();
+		System.out.print("Player Name?");
+		spelarnamn = hai.nextLine();
+		System.out.print("How old are you?");
+		ålder = hai.nextInt();
+		System.out.print("so you are the famous Adventurer! and you are just "
+				+ ålder + " years old");
+		fullname = hai.nextLine();
+		hai.nextLine();
+		do {
+			System.out.print("Vart?");
+			kommando = hai.nextLine();
+			hälsa -= 0.1;
+
+			riktning = kommando.charAt(0);
+			switch (riktning) {
+			case 'N':
+			case 'n': {
+				System.out.println("We head north!");
+				posY += 1;
+				break;
+			}
+			case 'S':
+			case 's': {
+				System.out.println("We head south!");
+				posY -= 1;
+				break;
+			}
+			case 'W':
+			case 'w': {
+				System.out.println("We head west!");
+				posX -= 1;
+				break;
+			}
+			case 'E':
+			case 'e': {
+				System.out.println("We head east!");
+				posX += 1;
+				break;
+			}
+			}
+			System.out.println("You are at (" + posX + "," + posY + ") with health " + hälsa);
+
+			int action = probability();
+			if (action == 0) { // Monster
+
+			} else if (action <= 10) { // NPC
+
+			} else if (action <= 15) { // Pengar
+
+				int antalpengar = probability();
+				if (antalpengar < 50)
+					pengar += 1;
+				else if (antalpengar < 80)
+					pengar += 5;
+				else
+					pengar += 10;
+			} else if (action <= 18) { // hål
+
+				int djup = probability(5) + 1;
+				System.out.println("You fell into a hole and lost " + djup + " health.");
+				hälsa -= djup;
+				System.out.println("Your new health is " + hälsa);
+			}
+
+			delay(500);
+		} while (!(kommando.equalsIgnoreCase("gå!")));
+		System.out.println("Farewell!");
+
+		hai.close();
+	}
+}
