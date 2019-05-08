@@ -17,7 +17,7 @@ public class quest {
 	static float hälsa = 100;
 
 	static void gameStory() {
-		System.out.println("First row");
+		System.out.println("1:st row");
 		System.out.println("2:nd row");
 	}
 

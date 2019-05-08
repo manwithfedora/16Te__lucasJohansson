@@ -5,7 +5,6 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JFrame;
-
 /*
 Spelplan av rektanglar?
 Håll reda på spelpjäser i en array.
@@ -16,9 +15,7 @@ Räkna ut vinnare.
 AI som kollar möjliga platser att sätta pjäser.
 AI som kan spela.
 AI som kan spela med en strategi. (max antal brickor eller annan)
-
 */
-
 public class Othello extends Canvas implements MouseListener {
 
 private static int width = 400;
@@ -85,13 +82,7 @@ win.setVisible(true);
 }
 
 public void mouseClicked(MouseEvent e) {
-int posX = e.getX();
-int posY = e.getY();
-int gridPosX = posX / boxSize;
-int gridPosY = posY / boxSize;
-board[gridPosX][gridPosY] = board[gridPosX][gridPosY] == 1 ? 0 : 1;
-System.out.println(posX + "." + posY);
-repaint();
+	
 }
 
 public void mousePressed(MouseEvent e) {
