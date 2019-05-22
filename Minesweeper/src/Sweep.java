@@ -23,6 +23,7 @@ public class Sweep extends JFrame {
     private JMenuItem jMenuItem1;
     private JPanel jPanel1;
     
+    
     int wid = 9, hei = 9, noOfBombs = 10;
     JToggleButton[][] blocks = new JToggleButton[hei][wid];
     int[][] blox = new int[hei][wid];
